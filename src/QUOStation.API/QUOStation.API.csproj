@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\QUOStation.Domain\QUOStation.Domain.csproj" />
+    <ProjectReference Include="..\QUOStation.Services\QUOStation.Services.csproj" />
+  </ItemGroup>
+
 </Project>

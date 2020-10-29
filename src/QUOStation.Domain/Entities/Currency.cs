@@ -1,21 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using Newtonsoft.Json;
 
-namespace QUOStation.Domain.Entities
+public partial class Currency
 {
-    public class Currency
-    {
-        public string Code { get; set; }
-        public string CodeIn { get; set; }
-        public string Name { get; set; }
-        public decimal High { get; set; }
-        public decimal Low { get; set; }
-        public float Variation { get; set; }
-        public double PercentageChange { get; set; }
-        public decimal Bid { get; set; }
-        public decimal Ask { get; set; }
-        public string TimeStamp { get; set; }
-        public string CreateDate { get; set; }
-    }
+    [JsonProperty("code")]
+    public string Code { get; set; }
+
+    [JsonProperty("codein")]
+    public string Codein { get; set; }
+
+    [JsonProperty("name")]
+    public string Name { get; set; }
+
+    [JsonProperty("high")]
+    public string High { get; set; }
+
+    [JsonProperty("low")]
+    public string Low { get; set; }
+
+    [JsonProperty("varBid")]
+    public string VarBid { get; set; }
+
+    [JsonProperty("pctChange")]
+    public string PctChange { get; set; }
+
+    [JsonProperty("bid")]
+    public string Bid { get; set; }
+
+    [JsonProperty("ask")]
+    public string Ask { get; set; }
+
+    [JsonProperty("timestamp")]
+    //[JsonConverter(typeof(string))]
+    public string Timestamp { get; set; }
+
+    [JsonProperty("create_date")]
+    public DateTimeOffset CreateDate { get; set; }
 }
+
